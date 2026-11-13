@@ -1,0 +1,119 @@
+================================================================================
+                    GIT & GITHUB WORKFLOW - COMMAND DOCUMENTATION
+                     Project: Git_GitHub_Assignment
+                     Author: Nikhilpatel23 (nikhilpatel2242@gmail.com)
+================================================================================
+
+1. git config --global user.name "Nikhilpatel23"
+   Explanation: Sets the global commit author name associated with all Git commits
+   on this system.
+
+2. git config --global user.email "nikhilpatel2242@gmail.com"
+   Explanation: Configures the global email address linked to the author's Git commits
+   for GitHub attribution.
+
+3. mkdir Git_GitHub_Assignment && cd Git_GitHub_Assignment
+   Explanation: Creates the root project directory and changes the current working
+   directory into it.
+
+4. git init
+   Explanation: Initializes a new, empty Git repository locally in the project directory,
+   creating the hidden .git metadata folder.
+
+5. git branch -M main
+   Explanation: Sets or renames the default primary working branch to 'main' matching
+   modern GitHub standard conventions.
+
+6. git add index.html about.html
+   Explanation: Stages the newly created index.html and about.html files to the Git
+   staging area (index) for commit.
+
+7. git commit -m "Initial commit"
+   Explanation: Records the first permanent snapshot (root commit) of the staged files
+   into the repository history.
+
+8. git add index.html
+   Explanation: Stages the updated index.html containing enhanced project overview
+   and key Git benefits.
+
+9. git commit -m "Updated index.html"
+   Explanation: Creates the second commit in the repository, recording updates made
+   to the index.html file.
+
+10. git branch feature
+    Explanation: Creates an isolated new branch named 'feature' branching off the
+    current commit on the main branch.
+
+11. git checkout feature
+    Explanation: Switches the active working tree and HEAD pointer from 'main' to
+    the 'feature' branch.
+
+12. git add about.html
+    Explanation: Stages the modified about.html file which includes the newly added
+    feature highlights section.
+
+13. git commit -m "Added feature section"
+    Explanation: Saves a new commit specifically on the 'feature' branch containing
+    the feature additions.
+
+14. git checkout main
+    Explanation: Switches HEAD and the active working branch back to 'main' in
+    preparation for merging.
+
+15. git merge feature --no-ff -m "Merge branch 'feature' into main"
+    Explanation: Merges changes from the 'feature' branch into 'main', preserving
+    explicit merge history and graph divergence.
+
+16. git log --oneline --graph --all
+    Explanation: Renders an ASCII graph of all branches and commits in compact one-line
+    format to visualize branch lineage and merges.
+
+17. echo "*.log`ntemp/" > .gitignore
+    Explanation: Creates the .gitignore configuration file specifying rules to exclude
+    all .log files and the temp/ directory from tracking.
+
+18. git status
+    Explanation: Inspects the status of the working tree and staging area, confirming
+    that ignored files do not appear as untracked.
+
+19. git status --ignored
+    Explanation: Explicitly lists files currently ignored by Git according to rules
+    defined in .gitignore (verifying debug.log and temp/).
+
+20. git add .gitignore
+    Explanation: Stages the .gitignore configuration file so that ignore rules are
+    versioned and shared across collaborators.
+
+21. git commit -m "Configure .gitignore to ignore logs and temp directory"
+    Explanation: Commits the .gitignore file into the repository's version history.
+
+22. git add index.html
+    Explanation: Stages a temporary banner added to index.html in preparation for the
+    undo demonstration.
+
+23. git commit -m "Temporary change for undo demonstration"
+    Explanation: Commits the temporary modification to test safe history reversion.
+
+24. git revert HEAD --no-edit
+    Explanation: Undoes the changes made in the last commit by automatically generating
+    and recording a new inverse commit while keeping previous history intact.
+
+25. git log --oneline
+    Explanation: Verifies that the revert commit is recorded at the top of the log
+    and that no past commits were deleted.
+
+26. git remote add origin https://github.com/Nikhilpatel23/Git_GitHub_Assignment.git
+    Explanation: Establishes a remote connection pointing origin to the public GitHub
+    repository URL.
+
+27. git push -u origin main
+    Explanation: Pushes all local main branch commits to the remote GitHub repository
+    and sets upstream branch tracking.
+
+28. git remote -v
+    Explanation: Displays all registered remote repository aliases and their
+    associated fetch and push URLs.
+
+29. git branch -a
+    Explanation: Lists all branches including local branches and remote-tracking
+    branches (remotes/origin/main) to verify synchronization.
