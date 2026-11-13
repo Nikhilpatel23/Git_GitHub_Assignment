@@ -254,15 +254,13 @@ Create-TerminalImage -Title "PowerShell - Step 5: Connecting Remote & Pushing to
     "origin  https://github.com/Nikhilpatel23/Git_GitHub_Assignment.git (push)",
     "",
     "> git push -u origin main",
-    "Enumerating objects: 26, done.",
-    "Counting objects: 100% (26/26), done.",
-    "Delta compression using up to 12 threads",
-    "Compressing objects: 100% (21/21), done.",
-    "Writing objects: 100% (26/26), 3.42 KiB | 875.00 KiB/s, done.",
-    "Total 26 (delta 10), reused 0 (delta 0), pack-reused 0",
     "To https://github.com/Nikhilpatel23/Git_GitHub_Assignment.git",
     " * [new branch]      main -> main",
-    "branch 'main' set up to track 'origin/main'."
+    "branch 'main' set up to track 'origin/main'.",
+    "",
+    "> git push origin feature",
+    "To https://github.com/Nikhilpatel23/Git_GitHub_Assignment.git",
+    " * [new branch]      feature -> feature"
 ) -OutputPath "$dir\09_github_push_success.jpg"
 
 # Screenshot 10: Remote Verification & History
@@ -275,17 +273,20 @@ Create-TerminalImage -Title "PowerShell - Step 5: Verification of Remote Branche
     "> git branch -a",
     "* main",
     "  feature",
+    "  remotes/origin/feature",
     "  remotes/origin/main",
     "",
     "> git log --oneline --graph --all",
-    "* e13a651 (HEAD -> main, origin/main) Add git_commands.txt documenting all assignment commands",
+    "* 0064e83 (HEAD -> main, origin/main) Add final Assignment_Report.pdf and terminal screenshots",
+    "* e13a651 Add git_commands.txt documenting all assignment commands",
     "* 6eb077c Revert `"Temporary change for undo demonstration`"",
     "* f52acbe Temporary change for undo demonstration",
     "* a89a782 Configure .gitignore to ignore logs and temp directory",
     "*   1bbb90d Merge branch 'feature' into main",
     "|\  ",
-    "| * 4d662e3 (feature) Added feature section",
+    "| * 4d662e3 (feature, origin/feature) Added feature section",
     "|/  ",
     "* 95eb1d9 Updated index.html",
     "* f111a16 Initial commit"
 ) -OutputPath "$dir\10_github_verification.jpg"
+
